@@ -7,7 +7,7 @@ import Layout from './layout'
 const twolayout = props => (
     <Layout>
         <Box
-            width={{ base: '100%', sm: '500px' }}
+            width={{ base: '100%', sm: '555px' }}
             flex='1 0 auto'
             mt={{ base: '0', sm: '10px' }}
             p={3}

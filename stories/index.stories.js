@@ -25,14 +25,18 @@ const texte = () => {
                         src={MyImage}
                         rounded="full"
                         size="50px" />
-                    <Box height="50px" ml={4} p={0}>
+                    <Box ml={4} p={0}>
                         <Link color="teal.500" href="#" fontSize="19px">
                             vivi
                         </Link>
-                        <Text height="20px" fontSize="13px" color="gray.500">49分鐘</Text>
+                        <Text fontSize="13px" color="gray.500">49分鐘</Text>
                     </Box>
                 </Box>
-                <Text my={3} fontSize={26}>今天天氣真好</Text>
+                <Text
+                    my={3}
+                    fontSize={26}
+                    textTransform="uppercase"
+                    letterSpacing="wide">今天天氣真好</Text>
                 {/* <Divider mb={39} borderColor='blackAlpha.500' /> */}
             </Tworlayout>
         </>
@@ -56,7 +60,7 @@ const image = () => {
                     </Box>
                 </Box>
                 <Container>
-                    <AspectRatioBox maxW="100%" ratio={4 / 3}>
+                    <AspectRatioBox maxW="100%" ratio={4 / 2}>
                         <Image src={MyImage2} alt="naruto" objectFit="cover" />
                     </AspectRatioBox>
                 </Container>
@@ -82,7 +86,7 @@ const video = () => {
                     </Box>
                 </Box>
                 <Container>
-                    <AspectRatioBox maxW="full" ratio={1}>
+                    <AspectRatioBox maxW="full" ratio={4 / 2.3}>
                         <Box
                             as="iframe"
                             title="naruto"

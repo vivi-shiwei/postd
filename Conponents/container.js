@@ -8,7 +8,7 @@ const Container = props => (
     <Box
         // width='full' width='500px' mx='auto' mt={6} bg="#ffff" borderRadius='4px'
 
-        width={{ base: '110%', sm: '500px' }}
+        width={{ base: '110%', sm: '555px' }}
         mt={3}
         ml="-12px"
         bg="#ffff"
