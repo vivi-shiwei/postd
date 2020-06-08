@@ -160,7 +160,7 @@ const more = () => {
                     textTransform="uppercase"
                     letterSpacing="wide">今天天氣真好</Text>
                 <Container>
-                    <AspectRatioBox ratio={4 / 2} mb="2px">
+                    <AspectRatioBox ratio={4 / 2} mb="1px">
                         <Image src={MyImage2} alt="naruto" objectFit="cover" />
                     </AspectRatioBox>
                     <AspectRatioBox ratio={4 / 2}>
