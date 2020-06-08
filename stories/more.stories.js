@@ -55,7 +55,7 @@ const more = () => {
                 {/* <Divider mb={39} borderColor='blackAlpha.500' /> */}
             </Tworlayout>
 
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -79,7 +79,7 @@ const more = () => {
                 </Container>
             </Tworlayout>
 
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -107,7 +107,8 @@ const more = () => {
                     </AspectRatioBox>
                 </Container>
             </Tworlayout>
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -135,7 +136,8 @@ const more = () => {
                     </AspectRatioBox>
                 </Container>
             </Tworlayout>
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -166,7 +168,8 @@ const more = () => {
                     </AspectRatioBox>
                 </Container>
             </Tworlayout>
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -202,7 +205,8 @@ const more = () => {
                     </Box>
                 </Container>
             </Tworlayout>
-            <Tworlayout mt={{ base: '0', sm: '15px' }}>
+
+            <Tworlayout mt={{ base: '9px', sm: '15px' }}>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
                         <Image
@@ -241,6 +245,7 @@ const more = () => {
                     </Box>
                 </Container>
             </Tworlayout>
+
             <Tworlayout>
                 <Flex w='100%' justify='space-between' m={0} p={0}>
                     <Flex>
