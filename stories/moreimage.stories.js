@@ -29,7 +29,7 @@ const imgs = () => {
                         rounded="full"
                         size="50px" />
                     <Box ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi  is a beautiful girl
                     </Link>
                         <Text fontSize="13px" color="gray.500">49分鐘</Text>
@@ -60,7 +60,7 @@ const imgs2 = () => {
                         rounded="full"
                         size="50px" />
                     <Box height="50px" ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi  is a beautiful girl
                 </Link>
                         <Text fontSize="13px" color="gray.500">49分鐘</Text>
@@ -94,7 +94,7 @@ const imgs3 = () => {
                         rounded="full"
                         size="50px" />
                     <Box height="50px" ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi  is a beautiful girl
                 </Link>
                         <Text height="20px" fontSize="13px" color="gray.500">49分鐘</Text>
@@ -133,7 +133,7 @@ const imgs4 = () => {
                         rounded="full"
                         size="50px" />
                     <Box height="50px" ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi  is a beautiful girl
                 </Link>
                         <Text height="20px" fontSize="13px" color="gray.500">49分鐘</Text>

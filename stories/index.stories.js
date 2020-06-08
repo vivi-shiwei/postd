@@ -26,7 +26,7 @@ const texte = () => {
                         rounded="full"
                         size="50px" />
                     <Box ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi
                         </Link>
                         <Text fontSize="13px" color="gray.500">49分鐘</Text>
@@ -53,7 +53,7 @@ const image = () => {
                         rounded="full"
                         size="50px" />
                     <Box height="50px" ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi  is a beautiful girl
                     </Link>
                         <Text height="20px" fontSize="13px" color="gray.500">49分鐘</Text>
@@ -79,7 +79,7 @@ const video = () => {
                         rounded="full"
                         size="50px" />
                     <Box height="50px" ml={4} p={0}>
-                        <Link color="teal.500" href="#" fontSize="19px">
+                        <Link color="blue.500" href="#" fontSize="19px">
                             vivi
                                 </Link>
                         <Text height="20px" fontSize="13px" color="gray.500">49分鐘</Text>
