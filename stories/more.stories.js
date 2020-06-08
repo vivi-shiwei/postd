@@ -192,14 +192,14 @@ const more = () => {
                     textTransform="uppercase"
                     letterSpacing="wide">今天天氣真好</Text>
                 <Container>
-                    <AspectRatioBox ratio={4 / 3} mb="2px">
+                    <AspectRatioBox ratio={4 / 3} mb="1px">
                         <Image src={MyImage} alt="naruto" objectFit="cover" />
                     </AspectRatioBox>
                     <Box display="flex" h={{ base: '100px', sm: '150px' }} >
                         <AspectRatioBox width="50%" ratio={4 / 2} mr="1px">
                             <Image src={MyImage2} alt="naruto" objectFit="cover" />
                         </AspectRatioBox>
-                        <AspectRatioBox width="50%" ratio={4 / 2} ml="1px">
+                        <AspectRatioBox width="50%" ratio={4 / 2}>
                             <Image src={MyImage3} alt="naruto" objectFit="cover" />
                         </AspectRatioBox>
                     </Box>
