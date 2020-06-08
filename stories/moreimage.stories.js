@@ -109,7 +109,7 @@ const imgs3 = () => {
                     <AspectRatioBox ratio={4 / 3} mb="2px">
                         <Image src={MyImage} alt="naruto" objectFit="cover" />
                     </AspectRatioBox>
-                    <Box display="flex" h="150px" >
+                    <Box display="flex" h={{ base: '100px', sm: '150px' }} >
                         <AspectRatioBox width="50%" ratio={4 / 2} mr="1px">
                             <Image src={MyImage2} alt="naruto" objectFit="cover" />
                         </AspectRatioBox>
@@ -148,7 +148,7 @@ const imgs4 = () => {
                     <AspectRatioBox ratio={4 / 3} mb="1px">
                         <Image src={MyImage} alt="naruto" objectFit="cover" />
                     </AspectRatioBox>
-                    <Box display="flex" h="150px">
+                    <Box display="flex" h={{ base: '100px', sm: '150px' }}>
                         <AspectRatioBox width="50%" ratio={4 / 2} mr="1px">
                             <Image src={MyImage2} alt="naruto" objectFit="cover" />
                         </AspectRatioBox>
