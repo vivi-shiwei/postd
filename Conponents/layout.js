@@ -5,7 +5,8 @@ import {
 
 const layout = props => (
     <Box
-        pos='fixed'
+        // pos='fixed'
+        m='0'
         top='0'
         zIndex='4'
         bg="#f5f6f7"
