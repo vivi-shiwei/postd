@@ -8,8 +8,7 @@ const layout = props => (
         // pos='fixed'
         m='0'
         top='0'
-        zIndex='4'
-        bg="#f5f6f7"
+        bg="#F2F3F5"
         left='0'
         right='0'
         width='full'
