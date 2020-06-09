@@ -35,6 +35,7 @@ import {
     Radio,
     RadioGroup,
     Checkbox,
+    PseudoBox
 } from '@chakra-ui/core'
 
 import { IoIosImage, IoIosPerson, IoIosPeople,IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
@@ -602,12 +603,16 @@ const more = () => {
                     <ModalOverlay />
                     <ModalContent bg="none" border="none" p="0">
                         <ModalBody p="0" bg="none" border="none">
-                            {(num=== -1 )?
+                        <AspectRatioBox ratio={4 / 2}
+                                w={{ base: "400px", sm: "500px", md: "700px" }}>
+                                <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
+                            </AspectRatioBox>
+                            {/* {(num=== -1 )?
                             (<AspectRatioBox ratio={4 / 2}
                                 w={{ base: "400px", sm: "500px", md: "700px" }}>
                                 <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
                             </AspectRatioBox>) : (<Box display='flex' justify='space-between' bg='none' p="none">
-                            <Button rightIcon={IoIosArrowBack} fontSize={30} my='auto' h='285px' bg='none' p="0"
+                            <Button rightIcon={IoIosArrowBack} fontSize={30} my='auto' h='285px' bg='transparent' p="0" border="0"
                              onClick={() => imageclick('right')}
                                 _focus={{
                                     outline: 'none'
@@ -617,12 +622,13 @@ const more = () => {
                                 w={{ base: "400px", sm: "500px", md: "700px" }}>
                                 <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
                             </AspectRatioBox>
-                            <Button leftIcon={IoIosArrowForward} fontSize={30} my='auto'  h='285px' bg='none' p="0"
+                            <PseudoBox leftIcon={IoIosArrowForward} fontSize={30} my='auto'  h='285px' bg='transparent' border="0" p="0"
+  as="button"
                              onClick={() => imageclick('left')}
                                 _focus={{
                                     outline: 'none'
-                                }}></Button>
-                            </Box>)}
+                                }}></PseudoBox>
+                            </Box>)} */}
                             
                         </ModalBody>
                     </ModalContent>
