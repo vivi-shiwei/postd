@@ -37,15 +37,20 @@ import {
     Checkbox,
 } from '@chakra-ui/core'
 
-import { IoIosImage, IoIosPerson, IoIosPeople } from "react-icons/io";
+import { IoIosImage, IoIosPerson, IoIosPeople,IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
 import { FiSmile } from "react-icons/fi";
 
 import Container from "../Conponents/container"
 import Tworlayout from "../Conponents/twolayout"
 import MyImage from "../static/QQ20200518181405.jpg"
+import MyImage1 from "../static/QQ20200518181405.jpg"
 import MyImage2 from "../static/timg.jpg"
 import MyImage3 from "../static/timg8J2T10BJ.jpg"
 import MyImage4 from "../static/timgXOPS3YTR.jpg"
+import MyImage5 from "../static/QQ20200518181405.jpg"
+import MyImage6 from "../static/timg.jpg"
+import MyImage7 from "../static/timg8J2T10BJ.jpg"
+import MyImage8 from "../static/timgXOPS3YTR.jpg"
 import App from "../App"
 import Layout from "../Conponents/layout"
 import Menus from "../Conponents/menu"
@@ -64,41 +69,44 @@ const Onelayout = props => {
 }
 
 
-// function BasicUsage() {
-//     const { isOpen, onOpen, onClose } = useDisclosure();
-//     return (
-//         <>
-//             <Button onClick={onOpen}>Open Modal</Button>
-
-// <Modal isOpen={isOpen} onClose={onClose}>
-//     <ModalOverlay />
-//     <ModalContent>
-//         <ModalHeader>Modal Title</ModalHeader>
-//         <ModalCloseButton />
-//         <ModalBody>
-//             <Lorem count={2} />
-//         </ModalBody>
-
-//         <ModalFooter>
-//             <Button variantColor="blue" mr={3} onClick={onClose}>
-//                 Close
-//   </Button>
-//             <Button variant="ghost">Secondary Action</Button>
-//         </ModalFooter>
-//     </ModalContent>
-// </Modal>
-//         </>
-//     );
-// }
 const more = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { isOpen: imageisOpen, onOpen: imageonOpen, onClose: imageonClose } = useDisclosure();
     const [size, setSize] = React.useState("md");
+    const [num, setnum] = React.useState(1);
 
-    const handleSizeClick = newSize => {
+    const handleSizeClick = (newSize,newnum) => {
         setSize(newSize);
+        setnum(newnum)
         imageonOpen();
     };
+    var My
+    const imageclick= props=>{
+        if(props==='left' && num!==0 && num!==9 ){
+            My="MyImage"+num
+        setSize(My);
+        console.log(size)
+        num++
+        }else if(props==='right' && num!==0 && num!==9){
+            My="MyImage"+num
+        setSize(My);
+        console.log(size)
+        num--
+        }
+        if(num===0){
+            num=8
+            My="MyImage"+num
+        setSize(My);
+        console.log(size)
+        }
+        if(num===9){
+            num=1
+            My="MyImage"+num
+        setSize(My);
+        console.log(size)
+        }
+        
+    }
     return (
         <Layout>
             <Onelayout>
@@ -109,15 +117,20 @@ const more = () => {
                         <Text ml={2} alignItems='center' mt='-12px'>建立貼文</Text>
                         <Divider borderColor='blackAlpha.300' />
                     </Container>
-                    <Flex>
+                    <Flex mb="30px">
                         <Image
-                            my="auto"
                             src={MyImage}
                             rounded="full"
                             size="50px" />
-                        <Box h="35px" my="auto">
-                            <Textarea type="phone" placeholder="vivi，你想些什麽？" my="auto" border="none"
+                        <Box my="auto" w='100%'>
+                            <Textarea
+                            type="phone"
+                            placeholder="vivi，你想些什麽？"
+                            border="none"
+                                size="sm"
                                 resize='none'
+                                overflowX='hidden'
+                                overflowY='hidden'
                                 _focus={{
                                     outline: 'none',
                                     bg: 'white'
@@ -139,22 +152,26 @@ const more = () => {
                                                 }} />
                                             <Divider borderColor='blackAlpha.300' />
                                         </Container>
-                                        <Flex>
+                                        <Flex mb="30px" H>
                                             <Image
-                                                my="auto"
                                                 src={MyImage}
                                                 rounded="full"
                                                 size="50px" />
-                                            <Box h="35px" my="auto">
-                                                <Textarea type="phone" placeholder="vivi，你想些什麽？" my="auto" border="none"
+                                            <Box my="auto" w="100%" h>
+                                                <Textarea
+                                                type="phone"
+                                                placeholder="vivi，你想些什麽？"
+                                                border="none"
                                                     resize='none'
+                                                    overflowX='hidden'
+                                                    overflowY='hidden'
                                                     _focus={{
                                                         outline: 'none',
                                                         bg: 'white'
                                                     }} onClick={onOpen} />
                                             </Box>
                                         </Flex>
-                                        <Divider borderColor='blackAlpha.300' mt="30px" />
+                                        <Divider borderColor='blackAlpha.300'/>
                                         <ButtonGroup>
                                             <Button leftIcon={IoIosImage} borderRadius='99px' >
                                                 <Breadcrumb fontSize={10}>
@@ -213,7 +230,7 @@ const more = () => {
                             </ModalContent>
                         </Modal>
                     </Flex>
-                    <Divider borderColor='blackAlpha.300' mt="30px" />
+                    <Divider borderColor='blackAlpha.300' />
                     <ButtonGroup mx="auto">
                         <Button leftIcon={IoIosImage} borderRadius='99px' width={{ base: '100px', sm: '150px' }}>
                             <Breadcrumb fontSize={10}>
@@ -233,6 +250,7 @@ const more = () => {
                     </ButtonGroup>
                 </Tworlayout>
 
+
                 <Tworlayout>
                     <Flex w='100%' justify='space-between' m={0} p={0}>
                         <Flex>
@@ -244,7 +262,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi
-                            </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -259,19 +277,18 @@ const more = () => {
                         <Box>
                             <Link color="blue.500" href="#">
                                 vivi
-                    </Link>{' '}
+                            </Link>{' '}
                             <Link color="blue.500" href="#">
                                 Jp Srib
-                    </Link>
+                            </Link>
                         </Box>
                         <Box color="blue.500" cursor='pointer'>
                             #
-                        <Link href="https://www.facebook.com/hashtag/%E7%AD%B7%E5%AD%90%E5%9F%BA%E5%85%84%E5%BC%9F?source=feed_text&epa=HASHTAG">
+                            <Link href="https://www.facebook.com/hashtag/%E7%AD%B7%E5%AD%90%E5%9F%BA%E5%85%84%E5%BC%9F?source=feed_text&epa=HASHTAG">
                                 筷子基兄弟
-                    </Link>
+                            </Link>
                         </Box>
                     </Text>
-
                     {/* <Divider mb={39} borderColor='blackAlpha.500' /> */}
                 </Tworlayout>
 
@@ -286,7 +303,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi
-                            </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -325,6 +342,52 @@ const more = () => {
                     {/* <Divider mb={39} borderColor='blackAlpha.500' /> */}
                 </Tworlayout>
 
+
+                <Tworlayout>
+                    <Flex w='100%' justify='space-between' m={0} p={0}>
+                        <Flex>
+                            <Image
+                                my="auto"
+                                src={MyImage}
+                                rounded="full"
+                                size="50px" />
+                            <Box ml={4} p={0}>
+                                <Flex my='auto' fontSize="19px">
+                                <Link color="blue.500" href="#">
+                                    vivi
+                                </Link><Text>——和</Text>
+                                <Link color="blue.500" href="#">
+                                小芳
+                                </Link><Text>其三个人</Text>
+                                </Flex>
+                                <Text fontSize="13px" color="gray.500">49分鐘</Text>
+                            </Box>
+                        </Flex>
+                        <Menus />
+                    </Flex>
+
+                    <Text
+                        my={3}
+                        fontSize={{ base: 20, sm: 26 }}
+                        textTransform="uppercase"
+                        letterSpacing="wide">
+                        <Box>
+                            美丽的{" "}
+                        <Link color="blue.500" href="https://www.facebook.com/hashtag/%E7%AD%B7%E5%AD%90%E5%9F%BA%E5%85%84%E5%BC%9F?source=feed_text&epa=HASHTAG">
+                                小芳
+                                </Link>和帅气的
+                        <Link color="blue.500" href="https://www.facebook.com/hashtag/%E7%AD%B7%E5%AD%90%E5%9F%BA%E5%85%84%E5%BC%9F?source=feed_text&epa=HASHTAG">
+                                小明
+                                </Link>热恋了，另外一个人
+                        <Link color="blue.500" href="https://www.facebook.com/hashtag/%E7%AD%B7%E5%AD%90%E5%9F%BA%E5%85%84%E5%BC%9F?source=feed_text&epa=HASHTAG">
+                                小军
+                                </Link>把小芳抢走了
+                        </Box>
+                    </Text>
+
+                    {/* <Divider mb={39} borderColor='blackAlpha.500' /> */}
+                </Tworlayout>
+
                 <Tworlayout>
                     <Flex w='100%' justify='space-between' m={0} p={0}>
                         <Flex>
@@ -336,7 +399,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi
-                            </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -403,31 +466,40 @@ const more = () => {
                         <Flex justify='flex-start' >
                             <Flex direction='column'>
                                 <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px" >
-                                    <Image src={MyImage} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => handleSizeClick(MyImage)} />
+                                    <Image src={MyImage1} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => {handleSizeClick(MyImage1,1)}} />
                                 </AspectRatioBox>
                                 <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2,2)} />
                                 </AspectRatioBox>
                             </Flex>
                             <Flex direction='column'>
                                 <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
+                                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3,3)} />
                                 </AspectRatioBox>
                                 <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
+                                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4,4)} />
                                 </AspectRatioBox>
+                                <Box pos='relative'>
                                 <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage)} />
+                                    <Image src={MyImage5} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage5,5)} />
                                 </AspectRatioBox>
+                                    <Box pos='absolute' left='0' bottom='0' right='0' top='0' bg= 'rgba(0, 0, 0, .4)' width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }}>
+                                        <Box m='auto' display='table' h='100%' w='100%'>
+                                            <Box display='table-cell' textAlign='center' verticalAlign='middle' color='white' fontSize={20}>
+                                        还有三张
+                                        </Box>
+                                        </Box>
+                                    </Box>
+                                    </Box>
                                 <Box display="none">
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                                        <Image src={MyImage6} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage6,6)} />
                                     </AspectRatioBox>
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
+                                        <Image src={MyImage7} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage7,7)} />
                                     </AspectRatioBox>
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
+                                        <Image src={MyImage8} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage8,8)} />
                                     </AspectRatioBox>
                                 </Box>
                             </Flex>
@@ -518,13 +590,34 @@ const more = () => {
                 </Tworlayout>
 
 
-                <Modal onClose={imageonClose} isOpen={imageisOpen} isCentered size={{ base: "400px", sm: "500px", md: "700px" }} bg="none"  >
+                <Modal
+                onClose={imageonClose}
+                isOpen={imageisOpen}
+                isCentered
+                size={{ base: "400px", sm: "500px", md: "700px" }}
+                bg="none" 
+                border="none"
+                p="0" >
                     <ModalOverlay />
-                    <ModalContent bg="none" >
-                        <ModalBody>
-                            <AspectRatioBox ratio={4 / 2} mt="7px">
+                    <ModalContent bg="none" border="none" p="0">
+                        <ModalBody p="0" bg="none" border="none">
+                            <Box display='flex' justify='space-between' bg='none' p="none">
+                            <Button rightIcon={IoIosArrowBack} fontSize={30} my='auto' h='285px' bg='none' p="0"
+                             onClick={() => imageclick('right')}
+                                _focus={{
+                                    outline: 'none'
+                                }}
+                                ></Button>
+                            <AspectRatioBox ratio={4 / 2}
+                                w={{ base: "400px", sm: "500px", md: "700px" }}>
                                 <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
                             </AspectRatioBox>
+                            <Button leftIcon={IoIosArrowForward} fontSize={30} my='auto'  h='285px' bg='none' p="0"
+                             onClick={() => imageclick('left')}
+                                _focus={{
+                                    outline: 'none'
+                                }}></Button>
+                            </Box>
                         </ModalBody>
                     </ModalContent>
                 </Modal>
@@ -556,7 +649,7 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox maxW="100%" ratio={4 / 2}>
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" />
+                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
                         </AspectRatioBox>
                     </Container>
                 </Tworlayout>
@@ -572,7 +665,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi  is a beautiful girl
-                        </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -606,7 +699,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi  is a beautiful girl
-                        </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -645,7 +738,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi  is a beautiful girl
-                        </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
@@ -687,7 +780,7 @@ const more = () => {
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
                                     vivi  is a beautiful girl
-                        </Link>
+                                </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
                         </Flex>
