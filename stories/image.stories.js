@@ -45,7 +45,6 @@ import Menus from "../Conponents/menu"
 function SizeExample() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [size, setSize] = React.useState("md");
-    const [url, setUrl] = React.useState("md");
 
     const handleSizeClick = newSize => {
         setSize(newSize);
@@ -86,15 +85,14 @@ function SizeExample() {
                     </Flex>
                 </Flex>
             </Container>
-            <Modal onClose={onClose} isOpen={isOpen} width='1000px' height='500px'>
+            <Modal onClose={onClose} isOpen={isOpen} size="xl" bg="none"  >
                 <ModalOverlay />
-                <ModalContent size>
-                    <ModalHeader></ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <AspectRatioBox ratio={1} mt="7px">
-                            <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
-                        </AspectRatioBox>
+                <ModalContent bg="none" >
+                    {/* <ModalHeader></ModalHeader>
+                    <ModalCloseButton /> */}
+                    <ModalBody><AspectRatioBox ratio={4 / 3} mt="7px">
+                        <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
+                    </AspectRatioBox>
                     </ModalBody>
                 </ModalContent>
             </Modal>
