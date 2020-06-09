@@ -53,38 +53,32 @@ function SizeExample() {
 
     return (
         <>
-            <Container mt={3}>
-                <Flex justify='flex-start' >
-                    <Flex direction='column'>
-                        <AspectRatioBox width='275px' height='249px' ratio={4 / 2} m="1px" >
-                            <Image src={MyImage} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => handleSizeClick(MyImage)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='275px' height='249px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
-                        </AspectRatioBox>
-                    </Flex>
-                    <Flex>
-                        <AspectRatioBox width='276px' height='165px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='276px' height='165px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
-                        </AspectRatioBox>
-                        <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
-                            <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
-                        </AspectRatioBox>
-                    </Flex>
-                </Flex>
-            </Container>
+            <Flex direction="column" w='400px' mx="auto">
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px" >
+                    <Image src={MyImage} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => handleSizeClick(MyImage)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px">
+                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px">
+                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px">
+                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px">
+                    <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" ratio={4 / 2} m="1px">
+                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' ratio={4 / 2} m="1px">
+                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
+                </AspectRatioBox>
+                <AspectRatioBox width='400px' height="300px" s ratio={4 / 2} m="1px">
+                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
+                </AspectRatioBox>
+            </Flex>
             <Modal onClose={onClose} isOpen={isOpen} size="xl" bg="none"  >
                 <ModalOverlay />
                 <ModalContent bg="none" >
