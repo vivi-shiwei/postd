@@ -74,6 +74,7 @@ const more = () => {
     const { isOpen: imageisOpen, onOpen: imageonOpen, onClose: imageonClose } = useDisclosure();
     const [size, setSize] = React.useState("md");
     const [num, setnum] = React.useState(1);
+    const [number, setnumber] = React.useState(1);
 
     const handleSizeClick = (newSize,newnum) => {
         setSize(newSize);
@@ -484,7 +485,7 @@ const more = () => {
                                     <Image src={MyImage5} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage5,5)} />
                                 </AspectRatioBox>
                                     <Box pos='absolute' left='0' bottom='0' right='0' top='0' bg= 'rgba(0, 0, 0, .4)' width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }}>
-                                        <Box m='auto' display='table' h='100%' w='100%'>
+                                        <Box m='auto' display='table' h='100%' w='100%' onClick={() => handleSizeClick(MyImage5,5)}>
                                             <Box display='table-cell' textAlign='center' verticalAlign='middle' color='white' fontSize={20}>
                                         还有三张
                                         </Box>
@@ -554,7 +555,7 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox maxW="100%" ratio={4 / 2}>
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2,(-1))} />
                         </AspectRatioBox>
                     </Container>
                 </Tworlayout>
@@ -601,7 +602,11 @@ const more = () => {
                     <ModalOverlay />
                     <ModalContent bg="none" border="none" p="0">
                         <ModalBody p="0" bg="none" border="none">
-                            <Box display='flex' justify='space-between' bg='none' p="none">
+                            {(num=== -1 )?
+                            (<AspectRatioBox ratio={4 / 2}
+                                w={{ base: "400px", sm: "500px", md: "700px" }}>
+                                <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
+                            </AspectRatioBox>) : (<Box display='flex' justify='space-between' bg='none' p="none">
                             <Button rightIcon={IoIosArrowBack} fontSize={30} my='auto' h='285px' bg='none' p="0"
                              onClick={() => imageclick('right')}
                                 _focus={{
@@ -617,7 +622,8 @@ const more = () => {
                                 _focus={{
                                     outline: 'none'
                                 }}></Button>
-                            </Box>
+                            </Box>)}
+                            
                         </ModalBody>
                     </ModalContent>
                 </Modal>
@@ -649,7 +655,7 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox maxW="100%" ratio={4 / 2}>
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
+                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2,(-1))} />
                         </AspectRatioBox>
                     </Container>
                 </Tworlayout>
