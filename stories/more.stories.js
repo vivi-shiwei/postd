@@ -402,31 +402,31 @@ const more = () => {
                     <Container mt={3}>
                         <Flex justify='flex-start' >
                             <Flex direction='column'>
-                                <AspectRatioBox width='275px' height='249px' ratio={4 / 2} m="1px" >
+                                <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px" >
                                     <Image src={MyImage} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => handleSizeClick(MyImage)} />
                                 </AspectRatioBox>
-                                <AspectRatioBox width='275px' height='249px' ratio={4 / 2} m="1px">
+                                <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px">
                                     <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
                                 </AspectRatioBox>
                             </Flex>
                             <Flex direction='column'>
-                                <AspectRatioBox width='276px' height='165px' ratio={4 / 2} m="1px">
+                                <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
                                     <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
                                 </AspectRatioBox>
-                                <AspectRatioBox width='276px' height='165px' ratio={4 / 2} m="1px">
+                                <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
                                     <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
                                 </AspectRatioBox>
-                                <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
+                                <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }} ratio={4 / 2} m="1px">
                                     <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage)} />
                                 </AspectRatioBox>
-                                <Box position="absolute">
-                                    <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
+                                <Box display="none">
+                                    <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
                                         <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2)} />
                                     </AspectRatioBox>
-                                    <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
+                                    <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
                                         <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3)} />
                                     </AspectRatioBox>
-                                    <AspectRatioBox width='276px' height='166px' ratio={4 / 2} m="1px">
+                                    <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
                                         <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4)} />
                                     </AspectRatioBox>
                                 </Box>
@@ -518,7 +518,7 @@ const more = () => {
                 </Tworlayout>
 
 
-                <Modal onClose={imageonClose} isOpen={imageisOpen} isCentered size bg="none"  >
+                <Modal onClose={imageonClose} isOpen={imageisOpen} isCentered size={{ base: "400px", sm: "500px", md: "700px" }} bg="none"  >
                     <ModalOverlay />
                     <ModalContent bg="none" >
                         <ModalBody>
@@ -712,7 +712,7 @@ const more = () => {
                     </Container>
                 </Tworlayout>
             </Onelayout>
-        </Layout>
+        </Layout >
     )
 }
 
