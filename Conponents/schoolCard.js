@@ -18,14 +18,22 @@ const schoolCard = (props) => {
         mr='20px'
         mb='20px'
         shadow='2px 2px 6px 0px #b9b9b9'
-        className='home-card-item'
       >
         <Box
-          as='h2'
-          fontSize='20px'
-          fontWeight='bold'
+          as='div'
+          p='15px'
         >
-          {props.title}
+          <Box as='div'>
+            <Box
+              as='h2'
+              fontSize='20px'
+              fontWeight='bold'
+              d='flex'
+            >
+              {props.title}
+            </Box>
+
+          </Box>
         </Box>
       </Box>
     </>

@@ -37,7 +37,8 @@ import {
     Checkbox,
     Heading,
     PseudoBox,
-    IconButton
+    IconButton,
+    Select
 } from '@chakra-ui/core'
 
 import { IoIosImage, IoIosPerson, IoIosPeople, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -68,8 +69,21 @@ const Onelayout = props => {
 const classes = () => {
     return (
         <Layout>
+            <Box display='flex' justifyContent='center' m='auto'>
+                <Button variantColor='blue'>新增</Button>
+                <Select maxW='400px' mx={4}>
+                    <option>
+                        2019-2020(現在)
+                </option>
+                    <option> 2018-2019 </option>
+                </Select>
+                <IconButton
+                    icon='edit'
+                    variantColor='blue'
+                />
+            </Box>
             <Container pb={4}>
-                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' />
+                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '180px']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='學生評估'
@@ -84,8 +98,7 @@ const classes = () => {
             </Container>
 
             <Container pb={4}>
-
-                <Fieldset title='班級' background='#ebf8ff' />
+                <Fieldset title='班級' background='#ebf8ff' wid={['0', '90px', '130px', '"250px"']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='初甲'
@@ -130,6 +143,7 @@ const classes = () => {
                 <Fieldset
                     title='選修課'
                     background='#ebf8ff'
+                    wid={['0', '90px', '130px', "250px"]}
                 />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
@@ -152,6 +166,7 @@ const classes = () => {
                 <Fieldset
                     title='興趣課'
                     background='#ebf8ff'
+                    wid={['0', '90px', '130px', "250px"]}
                 />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
@@ -172,7 +187,7 @@ const classes = () => {
             </Container>
 
             <Container pb={4}>
-                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' />
+                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '"180px"']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='學生評估'
