@@ -35,6 +35,7 @@ import {
     Radio,
     RadioGroup,
     Checkbox,
+    Heading,
     PseudoBox
 } from '@chakra-ui/core'
 
@@ -60,8 +61,7 @@ const Onelayout = props => {
     return (
         <Box
             width={{ base: '100%', sm: '500px', md: '555px' }}
-            pt={{ base: '2px', sm: '4px' }}
-            bg="#F2F3F5"
+            bg="blue.50"
             mx='auto'
             borderRadius='4px'
             {...props} />
@@ -115,12 +115,14 @@ const more = () => {
     }
     return (
         <Layout>
-            <Onelayout>
+            <Heading textAlign='center' >聖若瑟教區中學第一校</Heading>
+            <Onelayout
+                pt={{ base: '20px', sm: '20px' }}>
                 <Tworlayout>
                     <Container lineHeight='35px' mt='0'
-                        bg='#f5f6f7'
+                        backgroundColor="blue.50" opacity={0.6}
                     >
-                        <Text ml={2} alignItems='center' mt='-12px'>建立貼文</Text>
+                        <Text ml={2} alignItems='center' mt={{ base: '-11px', sm: '-12px' }}>建立貼文</Text>
                         <Divider borderColor='blackAlpha.300' />
                     </Container>
                     <Flex mb="30px">
@@ -144,95 +146,90 @@ const more = () => {
                         </Box>
                         <Modal isOpen={isOpen} onClose={onClose} size={{ base: '100%', sm: '500px', md: '555px' }}>
                             <ModalOverlay />
-                            <ModalContent mt={{ base: '9px', sm: '15px' }}
-                                borderRadius='5px'>
-                                <Onelayout>
-                                    <Tworlayout>
-                                        <Container lineHeight='35px' mt='0'
-                                            bg='#f5f6f7'>
-                                            <Text ml={2} alignItems='center' mt='-26px'>建立貼文</Text>
-                                            <ModalCloseButton
+                            <ModalContent
+                                borderRadius='5px' mt={{ base: '165px', sm: '180px' }}>
+                                <Tworlayout>
+                                    <Container lineHeight='35px'
+                                        backgroundColor="blue.50" opacity={0.5}>
+                                        <Text ml={2} alignItems='center' mt={{ base: '-20px', sm: '-26px' }}>建立貼文</Text>
+                                        <ModalCloseButton
+                                            _focus={{
+                                                outline: 'none',
+                                                backgroundColor: "blue.50", opacity: 0.5
+                                            }} />
+                                        <Divider borderColor='blackAlpha.300' />
+                                    </Container>
+                                    <Flex mb="30px" H>
+                                        <Image
+                                            src={MyImage}
+                                            rounded="full"
+                                            size="50px" />
+                                        <Box my="auto" w="100%" h>
+                                            <Textarea
+                                                type="phone"
+                                                placeholder="vivi，你想些什麽？"
+                                                border="none"
+                                                resize='none'
+                                                overflowX='hidden'
+                                                overflowY='hidden'
                                                 _focus={{
                                                     outline: 'none',
-                                                    bg: '#f5f6f7'
-                                                }} />
-                                            <Divider borderColor='blackAlpha.300' />
-                                        </Container>
-                                        <Flex mb="30px" H>
-                                            <Image
-                                                src={MyImage}
-                                                rounded="full"
-                                                size="50px" />
-                                            <Box my="auto" w="100%" h>
-                                                <Textarea
-                                                    type="phone"
-                                                    placeholder="vivi，你想些什麽？"
-                                                    border="none"
-                                                    resize='none'
-                                                    overflowX='hidden'
-                                                    overflowY='hidden'
-                                                    _focus={{
-                                                        outline: 'none',
-                                                        bg: 'white'
-                                                    }} onClick={onOpen} />
-                                            </Box>
-                                        </Flex>
-                                        <Divider borderColor='blackAlpha.300' />
-                                        <ButtonGroup>
-                                            <Button leftIcon={IoIosImage} borderRadius='99px' >
-                                                <Breadcrumb fontSize={10}>
-                                                    <Text>圖片/影片</Text>
-                                                </Breadcrumb>
-                                            </Button>
-                                            <Button leftIcon={IoIosPerson} borderRadius='99px'>
-                                                <BreadcrumbItem fontSize={10}>
-                                                    <Text>標注朋友</Text>
+                                                    bg: 'white'
+                                                }} onClick={onOpen} />
+                                        </Box>
+                                    </Flex>
+                                    <Divider borderColor='blackAlpha.300' />
+                                    <ButtonGroup>
+                                        <Button leftIcon={IoIosImage} borderRadius='99px' width={{ base: '100px', sm: '150px' }}>
+                                            <Breadcrumb fontSize={10}>
+                                                <Text>圖片 / 影片</Text>
+                                            </Breadcrumb>
+                                        </Button>
+                                        <Button leftIcon={IoIosPerson} borderRadius='99px' width={{ base: '80px', sm: '120px' }}>
+                                            <BreadcrumbItem fontSize={10}>
+                                                <Text>標注朋友</Text>
+                                            </BreadcrumbItem>
+                                        </Button>
+                                        <Button leftIcon={FiSmile} borderRadius='99px' width={{ base: '100px', sm: '150px' }}>
+                                            <Breadcrumb fontSize={10}>
+                                                <BreadcrumbItem>
+                                                    <Text>感受 / 生活</Text>
                                                 </BreadcrumbItem>
-                                            </Button>
-                                            <Button leftIcon={FiSmile} borderRadius='99px'>
-                                                <Breadcrumb fontSize={10}>
-                                                    <BreadcrumbItem>
-                                                        <Text>感受</Text>
-                                                    </BreadcrumbItem>
-                                                    <BreadcrumbItem>
-                                                        <Text>生活</Text>
-                                                    </BreadcrumbItem>
-                                                </Breadcrumb>
-                                            </Button>
-                                        </ButtonGroup>
-                                        <Container bg='#f5f6f7'>
-                                            <Divider borderColor='blackAlpha.300' />
-                                            <Flex direction="column" m={4}>
-                                                <Flex justify="space-between" mb={{ base: '1px', sm: '3px' }}>
-                                                    <Checkbox defaultIsChecked>動態消息</Checkbox>
-                                                    <Flex>
-                                                        <Menu>
-                                                            <MenuButton as={Button} leftIcon={IoIosPeople} rightIcon="chevron-down">
-                                                                <Text fontSize={10}>
-                                                                    朋友
-                                                                    </Text>
-                                                            </MenuButton>
-                                                            <MenuList fontSize={10}>
-                                                                <MenuItem>公開</MenuItem>
-                                                                <MenuItem>朋友</MenuItem>
-                                                            </MenuList>
-                                                        </Menu>
-                                                    </Flex>
-                                                </Flex>
-                                                <Flex justify="space-between">
-                                                    <Checkbox>限時動態</Checkbox>
-                                                    <Flex>
-                                                        <Button as={Button} leftIcon={IoIosPeople} rightIcon="chevron-down">
+                                            </Breadcrumb>
+                                        </Button>
+                                    </ButtonGroup>
+                                    <Container>
+                                        <Divider borderColor='blackAlpha.300' />
+                                        <Flex direction="column" mx={4}>
+                                            <Flex justify="space-between" mb={{ base: '2px', sm: '3px' }}>
+                                                <Checkbox defaultIsChecked>動態消息</Checkbox>
+                                                <Flex>
+                                                    <Menu>
+                                                        <MenuButton as={Button} leftIcon={IoIosPeople} rightIcon="chevron-down">
                                                             <Text fontSize={10}>
                                                                 朋友
-                                                            </Text>
-                                                        </Button>
-                                                    </Flex>
+                                                                    </Text>
+                                                        </MenuButton>
+                                                        <MenuList fontSize={10}>
+                                                            <MenuItem>公開</MenuItem>
+                                                            <MenuItem>朋友</MenuItem>
+                                                        </MenuList>
+                                                    </Menu>
                                                 </Flex>
                                             </Flex>
-                                        </Container>
-                                    </Tworlayout>
-                                </Onelayout>
+                                            <Flex justify="space-between">
+                                                <Checkbox>限時動態</Checkbox>
+                                                <Flex>
+                                                    <Button as={Button} leftIcon={IoIosPeople} rightIcon="chevron-down">
+                                                        <Text fontSize={10}>
+                                                            朋友
+                                                            </Text>
+                                                    </Button>
+                                                </Flex>
+                                            </Flex>
+                                        </Flex>
+                                    </Container>
+                                </Tworlayout>
                             </ModalContent>
                         </Modal>
                     </Flex>
