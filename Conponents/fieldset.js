@@ -45,7 +45,7 @@ const fieldset = (props) => {
           }
         `}
       </style> */}
-      <Box d='flex' justify='center'
+      <Flex justify='center'
         as='header'
         h='60px'
         my='25px'
@@ -75,7 +75,7 @@ const fieldset = (props) => {
           mt='10px'
           variantColor='blue'
         />
-      </Box>
+      </Flex>
     </>
   )
 }
