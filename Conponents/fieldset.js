@@ -1,18 +1,29 @@
 import React from 'react'
 import {
-  Box
+  Box,
+  Button,
+  IconButton,
+  Flex
 } from '@chakra-ui/core'
 
 const fieldset = (props) => {
   return (
     <>
-      <Box
+      <Flex
         as='header'
         my='20px'
         position='relative'
-        textAlign='center'
-        className='header-line'
-      >
+        textAlign='center'>
+        <Button
+          variantColor='blue'
+          position=' absolute'
+          top='50%'
+          left=' 0'
+          transform=' translate(0, -50%)'
+          minW='110px'
+        >
+          新增
+      </Button>
         <Box
           as='span'
           px='10px'
@@ -25,22 +36,13 @@ const fieldset = (props) => {
         >
           {props.title}
         </Box>
-        {props.children}
-      </Box>
-      <style jsx>
-        {`
-          :global(.header-line:before){
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            border-bottom: 1px solid gray;
-            z-index: 0;
-          }
-        `}
-      </style>
+        <IconButton
+          icon='edit'
+          my='auto'
+          variantColor='blue'
+          ml={4}
+        />
+      </Flex>
     </>
   )
 }
