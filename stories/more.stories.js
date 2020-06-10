@@ -636,32 +636,33 @@ const more = () => {
                     onClose={imageonClose}
                     isOpen={imageisOpen}
                     isCentered
-                    size={{ base: "400px", sm: "500px", md: "1000px" }}
+                    size={{ base: "500px", sm: "700px", md: "1000px" }}
                     bg="none"
                     border="none"
                     p="0" >
                     <ModalOverlay />
                     <ModalContent bg="none" border="none" p="0">
                         <ModalBody p="0" bg="none" border="none">
-                            <Flex justify='space-between'>
+                            <Flex justify={{ base: 'none', sm: 'space-between' }}>
                                 <AspectRatioBox ratio={4 / 2}
-                                    w={{ base: "400px", sm: "500px", md: "1000px" }}>
+                                    w={{ base: "600px", sm: "700px", md: "1000px" }}>
                                     <Image src={size} alt="naruto" objectFit="cover" cursor='pointer' />
                                 </AspectRatioBox>
-                                <Box bg='white' width='300px' height='500px'>
-                                    <Box m={3} p={0}>
+                                <Box bg='white' width={{ base: "300px", sm: "400px" }} height={{ base: "200px", sm: "230px", md: '500px' }}>
+                                    <Box m={{ base: 1, sm: 3 }} p={0}>
                                         <Flex justify='space-between' m={0} p={0}>
                                             <Flex>
                                                 <Image
                                                     my="auto"
                                                     src={MyImage}
                                                     rounded="full"
-                                                    size="50px" />
-                                                <Box ml={4} p={0}>
+                                                    size={["30px", "30px", "40px", "50px"]}
+                                                />
+                                                < Box ml={4} p={0} >
                                                     <Link color="blue.500" href="#" fontSize="10px">
                                                         {value1}
                                                     </Link>
-                                                    <Text fontSize="13px" color="gray.500">49分鐘</Text>
+                                                    <Text fontSize={{ base: "6px", sm: "13px" }} color="gray.500">49分鐘</Text>
                                                 </Box>
                                             </Flex>
                                             <Menus />
@@ -714,7 +715,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                             </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
