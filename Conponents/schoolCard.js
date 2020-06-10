@@ -15,8 +15,7 @@ const schoolCard = (props) => {
         d='inline-block'
         borderRadius='10px'
         position='relative'
-        mr='20px'
-        mb='20px'
+        m='10px'
         shadow='2px 2px 6px 0px #b9b9b9'
       >
         <Box
