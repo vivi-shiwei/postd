@@ -485,7 +485,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                         </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
@@ -508,25 +508,25 @@ const more = () => {
                         <Flex justify='flex-start' >
                             <Flex direction='column'>
                                 <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px" >
-                                    <Image src={MyImage1} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => { handleSizeClick(MyImage1, 1, '今天天氣真好', 'vivi  is a beautiful girl') }} />
+                                    <Image src={MyImage1} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => { handleSizeClick(MyImage1, 1, '今天天氣真好', 'vivi') }} />
                                 </AspectRatioBox>
                                 <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                    <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣真好', 'vivi')} />
                                 </AspectRatioBox>
                             </Flex>
                             <Flex direction='column'>
                                 <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                    <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣真好', 'vivi')} />
                                 </AspectRatioBox>
                                 <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '139px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4, 4, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                    <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4, 4, '今天天氣真好', 'vivi')} />
                                 </AspectRatioBox>
                                 <Box pos='relative'>
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage5} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage5, 5, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                        <Image src={MyImage5} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage5, 5, '今天天氣真好', 'vivi')} />
                                     </AspectRatioBox>
                                     <Box pos='absolute' left='0' bottom='0' right='0' top='0' bg='rgba(0, 0, 0, .4)' width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '153px', md: '166px' }}>
-                                        <Box m='auto' display='table' h='100%' w='100%' onClick={() => handleSizeClick(MyImage5, 5, '今天天氣真好', 'vivi  is a beautiful girl')}>
+                                        <Box m='auto' display='table' h='100%' w='100%' onClick={() => handleSizeClick(MyImage5, 5, '今天天氣真好', 'vivi')}>
                                             <Box display='table-cell' textAlign='center' verticalAlign='middle' color='white' fontSize={20}>
                                                 还有三张
                                         </Box>
@@ -535,13 +535,13 @@ const more = () => {
                                 </Box>
                                 <Box display="none">
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage6} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage6, 6, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                        <Image src={MyImage6} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage6, 6, '今天天氣真好', 'vivi')} />
                                     </AspectRatioBox>
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage7} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage7, 7, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                        <Image src={MyImage7} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage7, 7, '今天天氣真好', 'vivi')} />
                                     </AspectRatioBox>
                                     <AspectRatioBox width={{ base: '221px', sm: '234px', md: '275px' }} height={{ base: '140px', sm: '152px', md: '166px' }} ratio={4 / 2} m="1px">
-                                        <Image src={MyImage8} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage8, 8, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                                        <Image src={MyImage8} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage8, 8, '今天天氣真好', 'vivi')} />
                                     </AspectRatioBox>
                                 </Box>
                             </Flex>
@@ -586,7 +586,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                             </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
@@ -730,7 +730,7 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox maxW="100%" ratio={4 / 2}>
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, (-1), '今天天氣不好', 'vivi  is a beautiful girl')} />
+                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, (-1), '今天天氣不好', 'vivi')} />
                         </AspectRatioBox>
                     </Container>
                 </Tworlayout>
@@ -745,7 +745,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                                 </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
@@ -762,10 +762,10 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox ratio={4 / 2} mb="1px">
-                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                            <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣真好', 'vivi')} />
                         </AspectRatioBox>
                         <AspectRatioBox ratio={4 / 2}>
-                            <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣真好', 'vivi  is a beautiful girl')} />
+                            <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣真好', 'vivi')} />
                         </AspectRatioBox>
                     </Container>
                 </Tworlayout>
@@ -780,7 +780,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                                 </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
@@ -796,14 +796,14 @@ const more = () => {
                     >今天天氣不好</Text>
                     <Container mt={3}>
                         <AspectRatioBox ratio={4 / 3} mb="1px">
-                            <Image src={MyImage1} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage, 1, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                            <Image src={MyImage1} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage, 1, '今天天氣不好', 'vivi')} />
                         </AspectRatioBox>
                         <Box display="flex" h={{ base: '100px', sm: '150px' }} >
                             <AspectRatioBox width="50%" ratio={4 / 2} mr="1px">
-                                <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                                <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣不好', 'vivi')} />
                             </AspectRatioBox>
                             <AspectRatioBox width="50%" ratio={4 / 2}>
-                                <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                                <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣不好', 'vivi')} />
                             </AspectRatioBox>
                         </Box>
                     </Container>
@@ -819,7 +819,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                                 </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
@@ -836,17 +836,17 @@ const more = () => {
 
                     <Container mt={3}>
                         <AspectRatioBox ratio={4 / 3} mb="1px">
-                            <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage, 1, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                            <Image src={MyImage} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage, 1, '今天天氣不好', 'vivi')} />
                         </AspectRatioBox>
                         <Box display="flex" h={{ base: '100px', sm: '150px' }}>
                             <AspectRatioBox width="50%" ratio={4 / 2} mr="1px">
-                                <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                                <Image src={MyImage2} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage2, 2, '今天天氣不好', 'vivi')} />
                             </AspectRatioBox>
                             <AspectRatioBox width="50%" ratio={4 / 2}>
-                                <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣不好', 'vivi  is a beautiful girl')} />
+                                <Image src={MyImage3} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage3, 3, '今天天氣不好', 'vivi')} />
                             </AspectRatioBox>
                             <AspectRatioBox width="50%" ratio={4 / 2} ml="1px">
-                                <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4, 4, '今天天氣不好')} />
+                                <Image src={MyImage4} alt="naruto" objectFit="cover" onClick={() => handleSizeClick(MyImage4, 4, '今天天氣不好', 'vivi')} />
                             </AspectRatioBox>
                         </Box>
                     </Container>
@@ -862,7 +862,7 @@ const more = () => {
                                 size="50px" />
                             <Box ml={4} p={0}>
                                 <Link color="blue.500" href="#" fontSize="19px">
-                                    vivi  is a beautiful girl
+                                    vivi
                                 </Link>
                                 <Text fontSize="13px" color="gray.500">49分鐘</Text>
                             </Box>
