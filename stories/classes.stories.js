@@ -83,7 +83,7 @@ const classes = () => {
                 />
             </Box>
             <Container pb={4}>
-                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '180px']} />
+                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '350px']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='學生評估'
@@ -98,7 +98,7 @@ const classes = () => {
             </Container>
 
             <Container pb={4}>
-                <Fieldset title='班級' background='#ebf8ff' wid={['0', '90px', '130px', '"250px"']} />
+                <Fieldset title='班級' background='#ebf8ff' wid={['0', '90px', '130px', '300px']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='初甲'
@@ -143,7 +143,7 @@ const classes = () => {
                 <Fieldset
                     title='選修課'
                     background='#ebf8ff'
-                    wid={['0', '90px', '130px', "250px"]}
+                    wid={['0', '90px', '130px', "300px"]}
                 />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
@@ -166,7 +166,7 @@ const classes = () => {
                 <Fieldset
                     title='興趣課'
                     background='#ebf8ff'
-                    wid={['0', '90px', '130px', "250px"]}
+                    wid={['0', '90px', '130px', "300px"]}
                 />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
@@ -187,7 +187,7 @@ const classes = () => {
             </Container>
 
             <Container pb={4}>
-                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '"180px"']} />
+                <Fieldset title='聖若瑟教區中學第一校' background='#ebf8ff' wid={['0', '90px', '130px', '350px']} />
                 <Box as='section' textAlign='center'>
                     <SchoolCard
                         title='學生評估'

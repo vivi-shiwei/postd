@@ -22,7 +22,6 @@ import {
 import NextLink from 'next/link'
 import { AiOutlineLogout, AiOutlineDashboard, AiFillMessage } from 'react-icons/ai'
 import { IoMdPerson, IoMdNotifications, IoMdSearch, IoMdHome } from 'react-icons/io'
-import { useRouter } from 'next/router'
 import { MdDashboard } from 'react-icons/md'
 import Container from './contai'
 
